@@ -925,7 +925,7 @@ function lockHTML(err, busy){
     ? '<span class="tag part">Participant test environment</span><h1>D&amp;A Hub navigation test</h1><p>Enter the password from your invitation to open the test. It takes about 15 minutes.</p>'
     : '<span class="tag team">Project team</span><h1>D&amp;A Hub navigation study</h1><p>The study dashboard: menu comparison, session set-up, participant codes and results. Enter the team password to open it.</p>';
   const foot = part
-    ? '<div class="who">Looking for the study dashboard? That is a different link, for the project team.</div>'
+    ? ''
     : '<div class="who">Participants do not use this link. They open the participant test environment with their own link and session code.</div>';
   return '<div class="lock' + (part ? '' : ' team') + '">' + (part ? wavesSVG() : "") + '<form id="lockform">' + head +
     '<label class="sr" for="f-pw">Password</label><input type="password" id="f-pw" autocomplete="off" placeholder="Password">' + (err ? '<p class="err" role="alert">' + esc(err) + '</p>' : "") +
