@@ -701,14 +701,13 @@ function runHTML(){
       + '<li>Search and links inside pages are switched off, so please use the menu.</li></ol>'
       + '<p>There are no right or wrong answers. We are testing the design, not you.</p>'
       + '<div class="row"><button class="btn primary" data-act="begin">Start</button></div>');
-  if (R.phase === "record") over = veil('<div class="eyebrow">Before you start</div><h2 id="dlg-h">Record your screen and voice in Teams</h2>'
-    + '<p><b>First, close anything you would not want recorded</b> — confidential, personal or commercially sensitive material. When you share your screen, choose <b>this browser window only</b>, not your whole desktop.</p>'
-    + '<ol class="howto"><li>In <b>Microsoft Teams</b>, go to <b>Calendar</b> and select <b>Meet now</b>, then <b>Start meeting</b>.</li>'
-    + '<li>Select <b>Share</b> and choose <b>this browser window</b>.</li>'
-    + '<li>Open <b>More</b> (…) and select <b>Record and transcribe</b> → <b>Start recording</b>.</li>'
-    + '<li>Check your microphone is on, then come back here and press <b>I have started recording</b>.</li></ol>'
-    + '<p>At the end, this page creates a short <b>code</b> with your answers. Please <b>copy it and share it with the project team</b>, together with the recording.</p>'
-    + '<div class="row"><button class="btn ghost" data-act="rec-none">I can\'t record, continue without</button><button class="btn ghost" data-act="rec-fac">The facilitator is recording</button><button class="btn primary" data-act="rec-start">I have started recording</button></div>');
+  if (R.phase === "record") over = veil('<div class="eyebrow">Before you start</div><h2 id="dlg-h">Start recording in Teams</h2>'
+    + '<p><b>Close anything confidential</b> before you share your screen.</p>'
+    + '<ol class="howto"><li>In <b>Teams</b>: <b>Calendar</b> → <b>Meet now</b> → <b>Start meeting</b>.</li>'
+    + '<li><b>Share</b> → choose <b>this browser window</b> only.</li>'
+    + '<li><b>More (…)</b> → <b>Record and transcribe</b> → <b>Start recording</b>.</li>'
+    + '<li>Check your <b>microphone</b> is on.</li></ol>'
+    + '<div class="row"><button class="btn primary" data-act="rec-start">Recording is on</button></div>');
   if (R.phase === "taskcard") { const t = T[st.tasks[R.ti]];
     over = veil('<div class="eyebrow" id="dlg-h">' + tcount + '</div><p class="scenario">' + esc(t.scenario) + '</p>'
       + '<p><b>Please read the situation aloud</b>, then use the menu to find where you would go, thinking aloud as you look. Press <b>I\'d find it here</b> when you reach the page you would choose.</p>'
